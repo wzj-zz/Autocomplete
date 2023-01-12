@@ -1,3 +1,9 @@
+changes @wzj-zz
+    1. Fix incompatibility bug with v1.1.20.00 and higher
+    2. 用 !j, !k 在候选列表中上下移动
+
+-----
+
 Autocomplete by Uberi
 =====================
 Suggests and completes words as you type! Write faster and more efficiently.
