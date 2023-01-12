@@ -1,8 +1,7 @@
-changes by @wzj-zz
+# changes by @wzj-zz
 
-    1. Fix incompatibility bug with v1.1.20.00 and higher
-    
-    2. 用 !j, !k 在候选列表中上下移动
+1. Fix incompatibility bug with v1.1.20.00 and higher
+2. 用 !j, !k 在候选列表中上下移动
 
 -----
 
