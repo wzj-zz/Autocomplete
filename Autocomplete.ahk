@@ -185,14 +185,14 @@ If (Temp1 != hWindow)
     Gosub, ResetWord
 Return
 
-Up::
+!k::
 Gui, Suggestions:Default
 GuiControlGet, Temp1,, Matched
 If Temp1 > 1 ;ensure value is in range
     GuiControl, Choose, Matched, % Temp1 - 1
 Return
 
-Down::
+!j::
 Gui, Suggestions:Default
 GuiControlGet, Temp1,, Matched
 GuiControl, Choose, Matched, % Temp1 + 1
@@ -286,10 +286,10 @@ DisplayList := SubStr(DisplayList,1,-1)
 GuiControl,, Matched, `n%DisplayList%
 GuiControl, Choose, Matched, 1
 GuiControl, Move, Matched, w%MaxWidth% ;set the control width
-PosX := (A_CaretX != "" ? A_CaretX : 0) + OffsetX
+PosX := (A_CaretX || 0) + OffsetX
 If PosX + MaxWidth > ScreenWidth ;past right side of the screen
     PosX := ScreenWidth - MaxWidth
-PosY := (A_CaretY != "" ? A_CaretY : 0) + OffsetY
+PosY := (A_CaretY || 0) + OffsetY
 If PosY + BoxHeight > ScreenHeight ;past bottom of the screen
     PosY := ScreenHeight - BoxHeight
 Gui, Show, x%PosX% y%PosY% w%MaxWidth% NoActivate ;show window
